@@ -11,6 +11,6 @@ public:
             if(f[i]!=l[i]) break;
             ans += f[i];
         }
-        return ans;
+         return ans;
     }
 };

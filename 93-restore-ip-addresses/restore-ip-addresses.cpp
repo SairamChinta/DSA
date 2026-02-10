@@ -10,10 +10,8 @@ public:
         if (parts == 4 || index == s.size()) return;
         for (int len = 1; len <= 3 && index + len <= s.size(); len++) {
             string part = s.substr(index, len);
-
             if ((part[0] == '0' && part.size() > 1) || stoi(part) > 255)
                 continue;
-
             backtrack(s, index + len, parts + 1, current + part + ".");
         }
     }

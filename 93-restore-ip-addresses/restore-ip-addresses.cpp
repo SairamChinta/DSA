@@ -7,9 +7,7 @@ public:
             result.push_back(current.substr(0, current.size() - 1));
             return;
         }
-
         if (parts == 4 || index == s.size()) return;
-
         for (int len = 1; len <= 3 && index + len <= s.size(); len++) {
             string part = s.substr(index, len);
 
@@ -19,7 +17,6 @@ public:
             backtrack(s, index + len, parts + 1, current + part + ".");
         }
     }
-
     vector<string> restoreIpAddresses(string s) {
         backtrack(s, 0, 0, "");
         return result;

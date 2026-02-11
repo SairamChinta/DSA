@@ -13,7 +13,6 @@ public:
             while (left < right) {
                 int currentSum = nums[i] + nums[left] + nums[right];
 
-                // If we found the exact target, return it
                 if (currentSum == target) {
                     return currentSum;
                 }

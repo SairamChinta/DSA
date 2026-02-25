@@ -13,7 +13,6 @@ public:
         ListNode beforeDummy(0), afterDummy(0);
         ListNode* before = &beforeDummy;
         ListNode* after = &afterDummy;
-
         while (head) {
             if (head->val < x) {
                 before->next = head;
@@ -24,10 +23,8 @@ public:
             }
             head = head->next;
         }
-
-        after->next = nullptr;          // Important!
+        after->next = nullptr;
         before->next = afterDummy.next;
-
         return beforeDummy.next;
     }
 };
